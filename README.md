@@ -1,2 +1,24 @@
-# Blog-app-ror
-This repo holds a simple blog website app built with ROR. The website shows the list of posts and empowers readers to interact with them by adding comments and liking posts.
+# README
+
+This README would normally document whatever steps are necessary to get the
+application up and running.
+
+Things you may want to cover:
+
+* Ruby version
+
+* System dependencies
+
+* Configuration
+
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
