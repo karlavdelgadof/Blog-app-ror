@@ -1,16 +1,9 @@
 class Post < ApplicationRecord
-  has_many :comments 
-  has_many :likes
-  belongs_to :user
-  around_save :update_counter_posts
+  has_many :comments, dependent: :destroy
+  has_many :likes, dependent: :destroy
+  belongs_to :user, counter_cache: true
 
   def five_most_recent_comments
     comments.last(5)
-  end
-
-  private
-  
-  def update_counter_posts
-    user.update_counters [self.id], :posts_counter => user.posts.length
   end
 end
