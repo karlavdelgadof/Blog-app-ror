@@ -7,7 +7,7 @@ class Post < ApplicationRecord
   def five_most_recent_comments
     comments.last(5)
   end
-  
+
   private
 
   def update_post_counter

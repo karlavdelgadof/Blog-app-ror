@@ -4,7 +4,7 @@ class Like < ApplicationRecord
   after_create :update_like_counter
 
   private
-  
+
   def update_like_counter
     post.update(likes_counter: post.likes.length)
   end
