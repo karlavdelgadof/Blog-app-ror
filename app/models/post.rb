@@ -8,7 +8,6 @@ class Post < ApplicationRecord
   validates :comments_counter, numericality: { greater_than_or_equal_to: 0 }
   validates :likes_counter, numericality: { greater_than_or_equal_to: 0 }
 
-
   def five_most_recent_comments
     comments.last(5)
   end
