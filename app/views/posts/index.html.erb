@@ -1,0 +1,23 @@
+<div>
+  <section>
+    <div>User Image</div>
+    <div>
+      <h1><a><%= @user.name%></a></h1>
+      <span>Number of posts:<%= @user.posts_counter%></span>
+    </div>
+  </section>
+
+  <section>
+   <ul>
+     <% @posts.each do |post| %>
+       <li>
+         <h3>Post <%='#'%><%= post.id %></h3>
+         <p>post.text</p>
+         <span>Comments: <%= post.comments_counter %></span>
+         <span>Likes: <%= post.likes_counter %></span>
+       </li>
+     <% end %>
+   </ul>
+   <a>Pagination</a>
+  </section>
+</div>

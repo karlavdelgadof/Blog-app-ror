@@ -1,0 +1,20 @@
+<div>
+  <section>
+    <div>
+      <h1>Post <%='#'%><%= @post.id %> <span>by <%=@user.name%></span></h1>
+      <span>Comments: <%= @post.comments_counter %></span>
+      <span>Likes: <%= @post.likes_counter %></span>
+    </div>
+    <p><%= @post.text %></p>
+  </section>
+
+  <section>
+  <ul>
+  <% @post.comments.each do |comment| %>
+    <li>
+      <span><%= comment.author_id%>: <%= comment.text %></span>
+    </li>
+  <% end %>
+</ul>
+  </section>
+</div>
