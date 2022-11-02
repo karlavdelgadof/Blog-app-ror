@@ -2,14 +2,14 @@
   <section>
     <div>User Image</div>
     <div>
-      <h1><a><%= @user.name%></a></h1>
-      <span>Number of posts:<%= @user.posts_counter%></span>
+      <h1><a><%= @user.name %></a></h1>
+      <span>Number of posts:<%= @user.posts_counter %></span>
     </div>
   </section>
 
   <section>
    <ul>
-     <% @posts.each do |post| %>
+     <% @user.posts.each do |post| %>
        <li>
          <h3>Post <%='#'%><%= post.id %></h3>
          <p>post.text</p>

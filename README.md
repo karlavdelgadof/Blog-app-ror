@@ -62,7 +62,7 @@ To run tests:
 - Milestone 1: Creating a data model. ✅
 - Milestone 2: Processing data in models.	✅
 - Milestone 3: Validations and Model specs. ✅
-- Milestone 4: Setup and controllers. ⚙️
+- Milestone 4: Setup and controllers. ✅
 - Milestone 5: Controllers specs. ⚙️
 - Milestone 6: Views. ⚙️
 - Milestone 7: Forms. ⚙️
