@@ -1,15 +1,17 @@
-<h1>Users</h1>
+<main>
+  <h1 id="users-title">Users</h1>
 
-<p>Here is the list of users:</p>
-
-<ul>
-  <% @users.each do |user| %>
-  <li>
-    <div>User Image</div>
-    <div>
-      <h2><a><%= user.name %></a></h2>
-      <span>Number of posts:<%= user.posts_counter %></span>
-    </div>
-  </li>
-<% end %>
-</ul>
+  <ul id="list-users">
+    <% @users.each do |user| %>
+      <%= link_to user_path(user.id) do %>
+        <li class="user-card">
+          <div class="user-image"><%= image_tag user.photo %></div>
+          <div class="card-text">
+            <h2><%= user.name %></h2>
+            <span>Number of posts: <%= user.posts_counter %></span>
+          </div>
+        </li>
+      <% end %>
+    <% end %>
+  </ul>
+</main>
