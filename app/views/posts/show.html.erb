@@ -1,5 +1,5 @@
-<div>
-  <section>
+<main>
+  <section class="post">
     <div>
       <h1>Post: <%= @post.title %> <span>by <%=@user.name%></span></h1>
       <span>Comments: <%= @post.comments_counter %></span>
@@ -8,13 +8,14 @@
     <p><%= @post.text %></p>
   </section>
 
-  <section>
-  <ul>
-  <% @post.comments.each do |comment| %>
-    <li>
-      <span><%= comment.author_id%>: <%= comment.text %></span>
-    </li>
-  <% end %>
-</ul>
+  <section class="comment-section">
+    <h2>Comments</h2>
+    <ul>
+      <% @post.comments.each do |comment| %>
+        <li class="comment">
+          <span><%= comment.author_id%>: <%= comment.text %></span>
+        </li>
+      <% end %>
+    </ul>
   </section>
-</div>
+</main>
