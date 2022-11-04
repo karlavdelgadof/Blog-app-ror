@@ -64,7 +64,7 @@ To run tests:
 - Milestone 3: Validations and Model specs. ✅
 - Milestone 4: Setup and controllers. ✅
 - Milestone 5: Controllers specs. ✅
-- Milestone 6: Views. ⚙️
+- Milestone 6: Views. ✅
 - Milestone 7: Forms. ⚙️
 - Milestone 8: Integration specs for Views and fixing n+1 problems. ⚙️
 - Milestone 9: Add Devise. ⚙️
