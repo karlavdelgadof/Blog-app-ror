@@ -2,10 +2,11 @@
   <section class="post">
     <div>
       <h1>Post: <%= @post.title %> <span>by <%=@user.name%></span></h1>
-      <span>Comments: <%= @post.comments_counter %></span>
-      <span>Likes: <%= @post.likes_counter %></span>
+      <p><%= @post.text %></p>
     </div>
-    <p><%= @post.text %></p>
+    <span>Comments: <%= @post.comments_counter %></span>
+    <span>Likes: <%= @post.likes_counter %></span>
+    <%= render "likes/like" %>
   </section>
 
   <section class="comment-section">
@@ -13,9 +14,14 @@
     <ul>
       <% @post.comments.each do |comment| %>
         <li class="comment">
-          <span><%= comment.author_id%>: <%= comment.text %></span>
+          <span><%= comment.author.name%>: <%= comment.text %></span>
         </li>
       <% end %>
     </ul>
+    <div class="add-comment">
+      <h2>Add new comment</h2>
+      <%= render "comments/comment" %>
+    </div>
+    
   </section>
 </main>

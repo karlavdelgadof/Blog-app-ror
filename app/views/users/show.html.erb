@@ -4,6 +4,7 @@
     <div class="details">
       <h1><a><%= @user.name %></a></h1>
       <span>Posts: <%= @user.posts_counter %></span>
+      <%= link_to 'New Post', new_user_post_path(@user.id) %>
     </div>
   </section>
 
