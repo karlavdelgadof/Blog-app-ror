@@ -4,12 +4,13 @@
     <div class="details">
       <h1><a><%= @user.name %></a></h1>
       <span>Posts: <%= @user.posts_counter %></span>
+      <%= link_to 'New Post', new_user_post_path(@user.id) %>
     </div>
   </section>
 
   <section class="all-posts">
     <ul>
-      <% @user.posts.each do |post| %>
+      <% @posts.each do |post| %>
         <%= link_to user_post_path(@user.id, post.id) do %>
           <li class="post post-index">
             <h3>Post <%='#'%><%= post.id %></h3>
@@ -17,6 +18,17 @@
             <div class="likes-comments">
               <span>Comments: <%= post.comments_counter %></span>
               <span>Likes: <%= post.likes_counter %></span>
+            </div>
+            <div>
+              <h4>Comments</h4>
+              <ul>
+                <% post.five_most_recent_comments.each do |comment| %>
+                  <li>
+                    <span><%= comment.author.name %></span>
+                    <p><%= comment.text %></p>
+                  </li> 
+                <% end %>
+              </ul>
             </div>
           </li>
         <% end %>
