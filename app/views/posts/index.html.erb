@@ -21,9 +21,9 @@
             </div>
             <div>
               <h4>Comments</h4>
-              <ul>
+              <ul class="comments">
                 <% post.five_most_recent_comments.each do |comment| %>
-                  <li>
+                  <li class="comment">
                     <span><%= comment.author.name %></span>
                     <p><%= comment.text %></p>
                   </li> 
