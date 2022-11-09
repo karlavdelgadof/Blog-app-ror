@@ -56,7 +56,6 @@ group :development, :test do
   gem 'debug', platforms: %i[mri mingw x64_mingw]
   gem 'rails-controller-testing'
   gem 'rspec-rails'
-  gem 'capybara'
 end
 
 group :development do
@@ -77,4 +76,6 @@ group :test do
   gem 'selenium-webdriver'
   gem 'shoulda-matchers', '~> 5.0'
   gem 'webdrivers'
+  gem 'database_cleaner'
+  gem 'rspec-html-matchers'
 end
