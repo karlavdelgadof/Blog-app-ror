@@ -48,13 +48,19 @@ To run tests:
  - To run all tests:
  - Run `rspec spec`
 
-## Authors :writing_hand:
+## Authors :writing_hand: & Collaborators :busts_in_silhouettes
 
 :woman_technologist:  **Karla Delgado** :writing_hand: 
 
 - GitHub: [@karlavdelgadof](https://github.com/karlavdelgadof)
 - Twitter: [@karlavdelgadof](https://twitter.com/karlavdelgadof)
 - LinkedIn: [Karla Delgado](https://www.linkedin.com/in/karla-delgado-613a32239/)
+
+:woman_technologist: **Natasha Tatenda Chirombe** bust_in_silhouette
+
+- GitHub: [@NATASHA-ct]((https://github.com/NATASHA-ct)
+- Twitter: [@NatashaChirombe]
+- LinkedIn: Natasha Chirombe
 
 
 ## Project Milestones 📌 
@@ -65,8 +71,8 @@ To run tests:
 - Milestone 4: Setup and controllers. ✅
 - Milestone 5: Controllers specs. ✅
 - Milestone 6: Views. ✅
-- Milestone 7: Forms. ⚙️
-- Milestone 8: Integration specs for Views and fixing n+1 problems. ⚙️
+- Milestone 7: Forms. ✅
+- Milestone 8: Integration specs for Views and fixing n+1 problems. ✅
 - Milestone 9: Add Devise. ⚙️
 - Milestone 10: Add authorization rules. ⚙️
 - Milestone 11: Add API endpoints. ⚙️
