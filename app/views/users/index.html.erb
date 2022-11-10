@@ -1,5 +1,12 @@
 <main>
-  <h1 id="users-title">Users</h1>
+  <div>
+    <h1 id="users-title">Users</h1>
+    <% if user_signed_in? %>
+    <%= button_to "Log out", destroy_user_session_path, method: :delete %>
+    <% else %>
+      <%= link_to "Sign In", new_user_session_path %> 
+    <% end %>
+  </div>
 
   <ul id="list-users">
     <% @users.each do |user| %>
