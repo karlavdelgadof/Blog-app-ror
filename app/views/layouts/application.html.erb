@@ -7,11 +7,13 @@
     <%= csp_meta_tag %>
     <%= favicon_link_tag asset_path('favicon-32x32.png') %>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags %>
+    <%= javascript_importmap_tags :defaults%>
   </head>
 
   <body>
     <%= render "shared/header" %>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
     <%= yield %>
     <%= render "shared/footer" %>
   </body>
