@@ -13,5 +13,5 @@ class Ability
     return unless user.admin? :admin
 
     can :manage, :all
-    end
+  end
 end
