@@ -16,9 +16,9 @@ class Api::V1::CommentsController < Api::V1::ApplicationController
     @comment.post = @post
 
     if @comment.save
-      render json: @comment 
+      render json: @comment
     else
-      head :not_found 
+      head :not_found
     end
   end
 end
