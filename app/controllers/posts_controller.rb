@@ -30,4 +30,14 @@ class PostsController < ApplicationController
       end
     end
   end
+
+
+  def destroy
+    @post = Post.find(params[:id])
+    @post.author.decrement!(:posts_counter)
+    @post.destroy
+    respond_to do |format|
+      format.html { redirect_back_or_to user_path(current_user.id), notice: 'Deleted!' }
+    end
+  end
 end
