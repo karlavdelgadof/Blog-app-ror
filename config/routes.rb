@@ -12,8 +12,8 @@ Rails.application.routes.draw do
       resources :likes, only: [:create]
     end
   end
-end
-namespace :api do
+
+  namespace :api do
     namespace :v1 do
       resources :users do
         resources :posts do
@@ -22,4 +22,5 @@ namespace :api do
       end
     end
   end
+end
 
