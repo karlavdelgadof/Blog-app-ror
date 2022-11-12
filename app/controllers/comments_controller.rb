@@ -19,4 +19,13 @@ class CommentsController < ApplicationController
       render :new, locals: { comment: }
     end
   end
+
+  def destroy
+    @comment = Comment.find(params[:id])
+    @comment.post.decrement!(:comments_counter)
+    @comment.destroy
+    respond_to do |format|
+      format.html { redirect_back_or_to user_post_path(current_user.id, @comment.post.id), notice: 'Deleted!' }
+    end
+  end
 end

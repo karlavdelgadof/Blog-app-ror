@@ -10,7 +10,7 @@
 
   <section class="all-posts">
     <ul>
-      <% @posts.each do |post| %>
+      <% @posts.includes([:author]).each do |post| %>
         <%= link_to user_post_path(@user.id, post.id) do %>
           <li class="post post-index">
             <h3>Post <%='#'%><%= post.id %></h3>
@@ -19,6 +19,11 @@
               <span>Comments: <%= post.comments_counter %></span>
               <span>Likes: <%= post.likes_counter %></span>
             </div>
+            <% if can? :destroy, post %>
+              <%= form_with model: post, url: user_post_path(@user.id, post.id), method: :delete do |form| %>
+                <%= form.submit "Delete Post", class: "see" %>
+              <% end %>
+            <% end %>
             <div>
               <h4>Comments</h4>
               <ul class="comments">

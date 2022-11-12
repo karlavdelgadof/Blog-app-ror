@@ -16,6 +16,9 @@
   <section class="recent-posts">
     <div class="recent-title">
       <h2>Recent Posts</h2>
+      <%if can? :create, Post %>
+        <%= link_to "New Post", new_user_post_path(@user.id) %>
+      <% end %>
       <%= link_to user_posts_path(@user.id) do %>See all posts<% end %>
     </div>
     
