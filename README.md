@@ -73,8 +73,8 @@ To run tests:
 - Milestone 6: Views. ✅
 - Milestone 7: Forms. ✅
 - Milestone 8: Integration specs for Views and fixing n+1 problems. ✅
-- Milestone 9: Add Devise. ⚙️
-- Milestone 10: Add authorization rules. ⚙️
+- Milestone 9: Add Devise. ✅
+- Milestone 10: Add authorization rules. ✅
 - Milestone 11: Add API endpoints. ⚙️
 - Exercise: API documentation. ⚙️
 
